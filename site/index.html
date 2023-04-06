@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Кофейная коза</title>
+		<meta name="description" content="Тут должно быть описание. Оно отображается в поисковых запросах">
+		<meta name="keywords" content="Тут должны быть теги (ключевые слова через запятые). При необходимости можно удалить">
+		<meta name="title" content="Тут должен быть заголовок. Он отображается в соц сетях">
+		<link rel="icon" href="/img/h-logo.png">
+		<meta name="og:image" content="/img/preview.jpg">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<link rel="stylesheet" href="/css/styles.css">
+		<script type="text/javascript" async="true" src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
+	</head>
+
+	<body>
+		<!-- <div id="test" style="position: fixed; z-index: 200; background-color: #f88; width: 150px;height: 50px;">0px 0px</div> -->
+
+		<header class="h">
+			<div class="bg laptop-show desktop-show">
+				<div class="defender"></div>
+
+				<video muted loop autoplay>
+					<source src="/video/h-anim.mp4" type="video/mp4">
+				</video>
+			</div>
+
+			<div class="h-panel mob-show tablet-show">
+				<a href="/">
+					<img data-src="/img/h-logo.png" alt="">
+				</a>
+
+				<div class="h-panel-menu">
+					<nav>
+						<ul>
+							<li><a href="#place">Как нас найти?</a></li>
+							<li><a href="#comments">Оценки</a></li>
+							<li><a href="#social">Мы в соц сетях</a></li>
+							<li><a href="#menu">Меню</a></li>
+						</ul>
+					</nav>
+
+					<div class="obj"></div>					
+				</div>
+			</div>
+			<div class="h-panel-empty mob-show tablet-show"></div>
+
+			<div class="h-block mob-show tablet-show">
+				<strong class="animate__fadeInUp">Тепло?</strong>
+				<p class="animate__fadeInUp">Приходи в кофейную козу!</p>
+				<address class="animate__fadeInUp">Октябрьский проспект 17</address>
+				<address class="animate__fadeInUp">Ольгинская набережная 5а</address>
+			</div>
+
+			<div class="h-block laptop-show desktop-show">
+				<strong class="animate__fadeInUp">Приходи<br>в кофейную козу!</strong>
+				<address class="animate__fadeInUp">Октябрьский проспект 17</address>
+				<address class="animate__fadeInUp">Ольгинская набережная 5а</address>
+			</div>
+
+			<div class="wrap">
+				<button type="button">Забронировать столик</button>
+			</div>
+
+			<div class="modal-window mob-show tablet-show">
+				<div class="empty">
+					<button type="button">
+						<img data-src="/img/h-win-close.png" alt="">
+					</button>
+				</div>
+
+				<div class="wrap">
+					<strong>Где Вы предпочитаете забронировать столик?</strong>
+
+					<div class="btns">
+						<button type="button" onclick="window.open('tel:+79121231212', '_blank');">
+							<div class="bg">
+								<picture class="wrap">
+									<source srcset="/img/h-win-btn-1.webp" type="image/webp" />
+									<source srcset="/img/h-win-btn-1.jp2" type="image/jp2" />
+									<img data-src="/img/h-win-btn-1.png" alt="">
+								</picture>
+
+								<div class="grad"></div>
+							</div>
+
+							<address>Октябрьский проспект 17</address>
+
+							<div class="wrap">
+								<img data-src="/img/h-win-call.png" alt="">
+							</div>
+						</button>
+
+						<button type="button" onclick="window.open('tel:+79121231212', '_blank');">
+							<div class="bg">
+								<picture class="wrap">
+									<source srcset="/img/h-win-btn-2.webp" type="image/webp" />
+									<source srcset="/img/h-win-btn-2.jp2" type="image/jp2" />
+									<img data-src="/img/h-win-btn-2.png" alt="">
+								</picture>
+
+								<div class="grad"></div>
+							</div>
+
+							<address>Ольгинская набережная 5а</address>
+
+							<div class="wrap">
+								<img data-src="/img/h-win-call.png" alt="">
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-window laptop-show desktop-show">
+				<div class="window">
+					<div class="bg">
+						<picture>
+							<source srcset="/img/h-win-bg.webp" type="image/webp" />
+							<source srcset="/img/h-win-bg.jp2" type="image/jp2" />
+							<img data-src="/img/h-win-bg.png" alt="">
+						</picture>
+					</div>
+
+					<button type="button" class="close">
+						<img data-src="/img/h-win-close.png" alt="">
+					</button>
+
+					<div class="wrap">
+						<strong>Где Вы предпочитаете<br>забронировать столик?</strong>
+
+						<div class="blocks">
+							<div class="block">
+								<div class="wrap">
+									<picture>
+										<source srcset="/img/h-win-btn-1.webp" type="image/webp" />
+										<source srcset="/img/h-win-btn-1.jp2" type="image/jp2" />
+										<img data-src="/img/h-win-btn-1.png" alt="">
+									</picture>
+
+									<div class="grad"></div>
+									<address>Октябрьский проспект 17</address>
+								</div>
+
+								<button type="button" onclick="window.open('tel:+79121231212', '_blank');">
+									<span>+79121231212</span>
+									
+									<span class="wrap">
+										<img data-src="/img/h-win-call.png" alt="">
+									</span>
+								</button>
+							</div>
+
+							<div class="block">
+								<div class="wrap">
+									<picture>
+										<source srcset="/img/h-win-btn-2.webp" type="image/webp" />
+										<source srcset="/img/h-win-btn-2.jp2" type="image/jp2" />
+										<img data-src="/img/h-win-btn-2.png" alt="">
+									</picture>
+
+									<div class="grad"></div>
+									<address>Ольгинская набережная 5а</address>
+								</div>
+
+								<button type="button" onclick="window.open('tel:+79121231212', '_blank');">
+									<span>+79121231212</span>
+									
+									<span class="wrap">
+										<img data-src="/img/h-win-call.png" alt="">
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section id="social" class="sec1">
+				<div class="sec1-blocks">
+					<div class="sec1-blocks-line"></div>
+					<div class="sec1-blocks-line"></div>
+					<div class="sec1-blocks-line"></div>
+				</div>
+
+				<div class="before mob-show"></div>
+				<div class="before tablet-show"></div>
+				<div class="grad"></div>
+
+				<div class="wrap">
+					<p>
+						Следи за нами<br>
+						в соц сетях!
+					</p>
+				</div>
+
+				<div class="btns">
+					<button type="button" onclick="window.open('https://www.instagram.com/coffeevkoze_/', '_blank')" class="place">Перейти в инстаграм</button>
+					<button type="button" onclick="window.open('https://vk.com/coffeevkoze', '_blank')" class="vk">Перейти в вконтакте</button>
+				</div>
+			</section>
+
+			<section id="comments" class="sec2">
+				<div class="sec2-main">
+					<strong>За нас говорят наши клиенты</strong>
+
+					<div class="sec2-main-coms">
+						<div class="sec2-main-coms-line">
+							<div class="sec2-main-coms-line-block">
+								<div class="wrap">
+									<div class="color"></div>
+
+									<picture>
+										<source srcset="/img/sec2-txr.webp" type="image/webp" />
+										<source srcset="/img/sec2-txr.jp2" type="image/jp2" />
+										<img data-src="/img/sec2-txr.png" alt="">
+									</picture>
+								</div>
+
+								<div class="sec2-main-coms-line-block-title">
+									<picture class="wrap">
+										<source srcset="/img/sec2-2gis.webp" type="image/webp">
+										<source srcset="/img/sec2-2gis.jp2" type="image/jp2">
+										<img data-src="/img/sec2-2gis.png" alt="">
+									</picture>
+
+									<span>4.9/5</span>
+								</div>
+
+								<div class="sec2-main-coms-line-block-com">
+								</div>
+							</div>
+
+							<div class="sec2-main-coms-line-block">
+								<div class="wrap">
+									<div class="color"></div>
+
+									<picture>
+										<source srcset="/img/sec2-txr.webp" type="image/webp" />
+										<source srcset="/img/sec2-txr.jp2" type="image/jp2" />
+										<img data-src="/img/sec2-txr.png" alt="">
+									</picture>
+								</div>
+
+								<div class="sec2-main-coms-line-block-title">
+									<picture class="wrap">
+										<source srcset="/img/sec2-google.webp" type="image/webp">
+										<source srcset="/img/sec2-google.jp2" type="image/jp2">
+										<img data-src="/img/sec2-google.png" alt="">
+									</picture>
+
+									<span>4.9/5</span>
+								</div>
+
+								<div class="sec2-main-coms-line-block-com">
+								</div>
+							</div>
+						</div>
+						
+						<div class="sec2-main-coms-line">
+							<div class="sec2-main-coms-line-block">
+								<div class="wrap">
+									<div class="color"></div>
+
+									<picture>
+										<source srcset="/img/sec2-txr.webp" type="image/webp" />
+										<source srcset="/img/sec2-txr.jp2" type="image/jp2" />
+										<img data-src="/img/sec2-txr.png" alt="">
+									</picture>
+								</div>
+
+								<div class="sec2-main-coms-line-block-title">
+									<picture class="wrap">
+										<source srcset="/img/sec2-yandex.webp" type="image/webp">
+										<source srcset="/img/sec2-yandex.jp2" type="image/jp2">
+										<img data-src="/img/sec2-yandex.png" alt="">
+									</picture>
+
+									<span>4.9/5</span>
+								</div>
+
+								<div class="sec2-main-coms-line-block-com">
+								</div>
+							</div>
+
+							<div class="sec2-main-coms-line-block">
+								<div class="wrap">
+									<div class="color"></div>
+
+									<picture>
+										<source srcset="/img/sec2-txr.webp" type="image/webp" />
+										<source srcset="/img/sec2-txr.jp2" type="image/jp2" />
+										<img data-src="/img/sec2-txr.png" alt="">
+									</picture>
+								</div>
+
+								<div class="sec2-main-coms-line-block-title">
+									<picture class="wrap">
+										<source srcset="/img/sec2-zoon.webp" type="image/webp">
+										<source srcset="/img/sec2-zoon.jp2" type="image/jp2">
+										<img data-src="/img/sec2-zoon.png" alt="">
+									</picture>
+
+									<span>4.9/5</span>
+								</div>
+
+								<div class="sec2-main-coms-line-block-com">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="menu" class="sec3">
+				<div class="wrap">
+					<h1>Меню</h1>
+
+					<div class="blocks">
+						<div class="line">
+							<div class="block">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic1.webp" type="image/webp">
+									<source srcset="/img/sec3-ic1.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic1.png" alt="">
+								</picture>
+							</div>
+
+							<div class="block reverse">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic2.webp" type="image/webp">
+									<source srcset="/img/sec3-ic2.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic2.png" alt="">
+								</picture>
+							</div>
+
+							<div class="block">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic3.webp" type="image/webp">
+									<source srcset="/img/sec3-ic3.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic3.png" alt="">
+								</picture>
+							</div>
+						</div>
+
+						<div class="line mob-show tablet-show">
+							<div class="block">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic4.webp" type="image/webp">
+									<source srcset="/img/sec3-ic4.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic4.png" alt="">
+								</picture>
+							</div>
+
+							<div class="block reverse">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic5.webp" type="image/webp">
+									<source srcset="/img/sec3-ic5.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic5.png" alt="">
+								</picture>
+							</div>
+
+							<div class="block">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic6.webp" type="image/webp">
+									<source srcset="/img/sec3-ic6.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic6.png" alt="">
+								</picture>
+							</div>
+						</div>
+
+						<div class="line">
+							<div class="block">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic7.webp" type="image/webp">
+									<source srcset="/img/sec3-ic7.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic7.png" alt="">
+								</picture>
+							</div>
+
+							<div class="block reverse">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic8.webp" type="image/webp">
+									<source srcset="/img/sec3-ic8.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic8.png" alt="">
+								</picture>
+							</div>
+
+							<div class="block">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic9.webp" type="image/webp">
+									<source srcset="/img/sec3-ic9.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic9.png" alt="">
+								</picture>
+							</div>
+						</div>
+
+						<div class="line mob-show tablet-show">
+							<div class="block">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic10.webp" type="image/webp">
+									<source srcset="/img/sec3-ic10.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic10.png" alt="">
+								</picture>
+							</div>
+
+							<div class="block reverse">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic11.webp" type="image/webp">
+									<source srcset="/img/sec3-ic11.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic11.png" alt="">
+								</picture>
+							</div>
+
+							<div class="block">
+								<div class="list">
+									<ul>
+										
+									</ul>
+								</div>
+
+								<picture class="wrap">
+									<source srcset="/img/sec3-ic12.webp" type="image/webp">
+									<source srcset="/img/sec3-ic12.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic12.png" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="place" class="sec4">
+				<div class="wrap">
+					<h1>Как нас найти?</h1>
+
+					<div class="blocks">
+						<div class="block">
+							<picture class="wrap">
+								<source srcset="/img/sec4-loc1.webp" type="image/webp" />
+								<source srcset="/img/sec4-loc1.jp2" type="image/jp2" />
+								<img data-src="/img/sec4-loc1.png" alt="">
+							</picture>
+
+							<div class="data">
+								<div class="info">
+									<address>Октябрьский проспект 17</address><br>
+									<p>Вход со стороны кинотеатра смена</p><br>
+									<p>Режим работы: с 10:00 до 23:00</p>
+								</div>
+
+								<button type="button" onclick="window.open('https://yandex.ru/maps/?rtext=~57.812870%2C28.346466&rtt=comparison&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D63657717138', '_blank')">Проложить путь</button>
+							</div>
+
+							<div class="imgs num-1 laptop-show desktop-show">
+								<picture class="num-1">
+									<source srcset="/img/sec3-ic9.webp" type="image/webp">
+									<source srcset="/img/sec3-ic9.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic9.png" alt="">
+								</picture>
+
+								<picture class="num-1">
+									<source srcset="/img/sec3-ic8.webp" type="image/webp">
+									<source srcset="/img/sec3-ic8.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic8.png" alt="">
+								</picture>
+
+								<picture class="num-1">
+									<source srcset="/img/sec3-ic8.webp" type="image/webp">
+									<source srcset="/img/sec3-ic8.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic8.png" alt="">
+								</picture>
+
+								<picture class="num-1">
+									<source srcset="/img/sec3-ic9.webp" type="image/webp">
+									<source srcset="/img/sec3-ic9.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic9.png" alt="">
+								</picture>
+							</div>
+						</div>
+
+						<div class="block reverse">
+							<picture class="wrap">
+								<source srcset="/img/sec4-loc2.webp" type="image/webp" />
+								<source srcset="/img/sec4-loc2.jp2" type="image/jp2" />
+								<img data-src="/img/sec4-loc2.png" alt="">
+							</picture>
+
+							<div class="data">
+								<div class="info">
+									<address>Ольгинской набережной 5А</address><br>
+									<p>Вход со стороны</p><br>
+									<p>Режим работы: с 10:00 до 22:00</p>
+								</div>
+
+								<button type="button" onclick="window.open('https://yandex.ru/maps/?rtext=~57.817286%2C28.324748&rtt=comparison&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D164636335779', '_blank')">Проложить путь</button>
+							</div>
+
+							<div class="imgs num-2 laptop-show desktop-show">
+								<picture class="num-2">
+									<source srcset="/img/sec3-ic2.webp" type="image/webp">
+									<source srcset="/img/sec3-ic2.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic2.png" alt="">
+								</picture>
+
+								<picture class="num-2">
+									<source srcset="/img/sec3-ic2.webp" type="image/webp">
+									<source srcset="/img/sec3-ic2.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic2.png" alt="">
+								</picture>
+
+								<picture class="num-2">
+									<source srcset="/img/sec3-ic12.webp" type="image/webp">
+									<source srcset="/img/sec3-ic12.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic12.png" alt="">
+								</picture>
+
+								<picture class="num-2">
+									<source srcset="/img/sec3-ic2.webp" type="image/webp">
+									<source srcset="/img/sec3-ic2.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic2.png" alt="">
+								</picture>
+
+								<picture class="num-2">
+									<source srcset="/img/sec3-ic12.webp" type="image/webp">
+									<source srcset="/img/sec3-ic12.jp2" type="image/jp2">
+									<img data-src="/img/sec3-ic12.png" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="f">
+			<blockquote>
+				<p class="mob-show">
+					Кофе надо пить всегда<br>
+					и везде. При всяком<br>
+					удобном случае.<br>
+					Он превращает<br>
+					существование в жизнь.<br>
+					<br>
+					(Коко Шанель)
+				</p>
+
+				<p class="tablet-show">
+					Кофе надо пить всегда<br>
+					и везде. При всяком<br>
+					удобном случае.<br>
+					Он превращает<br>
+					существование в жизнь.<br>
+					<br>
+					(Коко Шанель)
+				</p>
+
+				<p class="laptop-show">
+					Кофе надо пить всегда и везде.<br>
+					При всяком удобном случае. Он превращает<br>
+					существование в жизнь.<br>
+					<br>
+					(Коко Шанель)
+				</p>
+
+				<p class="desktop-show">
+					Кофе надо пить всегда и везде.<br>
+					При всяком удобном случае. Он превращает<br>
+					существование в жизнь.<br>
+					<br>
+					(Коко Шанель)
+				</p>
+			</blockquote>
+
+			<a href="https://kakvariant.ru" target="_blank">&copy; КакВариант</a>
+		</footer>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/scripts.js"></script>
+		<script>
+			kv.commentsSec2.addComment(0, "Халласаар Халласаар", 4, "Ставлю 4 из 5 звёзд, ибо для ценителей настоящих кофейных напитков, заведение подходит 50/50. Персонал добрый, приветливый, заведение достаточно хорошее, но есть одно Но, брала латте за 127 рублей, попросил добавить корицы. Принесли заказ, сделали небольшой рисунок на латте, вроде бы ничего необычного, но добавлено было очень много корицы.");
+			kv.commentsSec2.addComment(1, "Халласаар Халласаар", 4, "Ставлю 4 из 5 звёзд, ибо для ценителей настоящих кофейных напитков, заведение подходит 50/50. Персонал добрый, приветливый, заведение достаточно хорошее, но есть одно Но, брала латте за 127 рублей, попросил добавить корицы. Принесли заказ, сделали небольшой рисунок на латте, вроде бы ничего необычного, но добавлено было очень много корицы.");
+			kv.commentsSec2.addComment(2, "Халласаар Халласаар", 4, "Ставлю 4 из 5 звёзд, ибо для ценителей настоящих кофейных напитков, заведение подходит 50/50. Персонал добрый, приветливый, заведение достаточно хорошее, но есть одно Но, брала латте за 127 рублей, попросил добавить корицы. Принесли заказ, сделали небольшой рисунок на латте, вроде бы ничего необычного, но добавлено было очень много корицы.");
+			kv.commentsSec2.addComment(3, "Халласаар Халласаар", 4, "Ставлю 4 из 5 звёзд, ибо для ценителей настоящих кофейных напитков, заведение подходит 50/50. Персонал добрый, приветливый, заведение достаточно хорошее, но есть одно Но, брала латте за 127 рублей, попросил добавить корицы. Принесли заказ, сделали небольшой рисунок на латте, вроде бы ничего необычного, но добавлено было очень много корицы.");
+		</script>
+	</body>
+</html>

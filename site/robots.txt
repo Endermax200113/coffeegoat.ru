@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /bd.php
+Disallow: /img.zip
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /js/
+Disallow: /video/
+Sitemap: http://coffeegoat.ru/sitemap

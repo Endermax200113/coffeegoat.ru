@@ -1,0 +1,15 @@
+ErrorDocument 404 /pages/404.php
+
+RewriteEngine On
+RewriteCond %{HTTPS} =off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+DirectoryIndex index.html index.shtml index.pl index.cgi index.php
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.coffeegoat\.ru$ [NC]
+RewriteRule ^(.*)$ https://coffeegoat.ru/$1 [R=301,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

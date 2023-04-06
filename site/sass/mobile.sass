@@ -1,0 +1,1187 @@
+*
+	margin: 0px
+	padding: 0px
+
+body
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	font-family: "Roboto", sans-serif
+
+	&.block-scroll
+		overflow: hidden
+
+img
+	opacity: 1
+	transition: opacity .3s ease .0s
+
+img[data-src]
+	opacity: 0
+
+.desktop-show
+	display: none
+
+.desktop-hide
+	display: inherit
+
+.laptop-show
+	display: none
+
+.laptop-hide
+	display: inherit
+
+.tablet-show
+	display: none
+
+.tablet-hide
+	display: inherit
+
+.mob-show
+	display: inherit
+
+.mob-hide
+	display: none
+
+.h
+	position: relative
+	flex: 1 0 auto
+	width: 100%
+	height: 100vh
+	background-color: #401a00
+	background-position: center
+	background-size: cover
+
+	.webp &
+		background-image: url("/img/h-bg.webp")
+
+	.jpeg2000 &
+		background-image: url("/img/h-bg.jp2")
+
+	.no-webp.no-jpeg2000 &
+		background-image: url("/img/h-bg.png")
+
+	& > .bg
+		&.laptop-show
+			display: none
+
+	&-panel
+		position: fixed
+		width: calc(100% - 20px)
+		height: 45px
+		padding: 0px 10px
+		background-color: #1a1a1adf
+		display: flex
+		justify-content: space-between
+		align-items: center
+		z-index: 50
+
+		&-empty
+			position: relative
+			height: 45px
+
+			&.mob-show
+				display: inherit
+
+		& > a
+			width: 35px
+			height: 35px
+			display: flex
+			justify-content: center
+			align-items: center
+			z-index: 61
+
+			& > img
+				width: 100%
+				height: 100%
+				object-fit: contain
+
+		&-menu
+			position: relative
+			width: 30px
+			height: 30px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			z-index: 55
+
+			& > .obj
+				position: relative
+				width: 30px
+				height: 4px
+				border-radius: 7px
+				background-color: #fff
+				z-index: 61
+				transition: background-color .0s ease .15s
+				cursor: pointer
+
+				&:before
+					position: absolute
+					content: ''
+					top: -10px
+					width: 30px
+					height: 4px
+					border-radius: 7px
+					background-color: #fff
+					transition: top .15s ease-out .15s, transform .15s ease-in .0s
+
+				&:after
+					position: absolute
+					content: ''
+					top: 10px
+					width: 30px
+					height: 4px
+					border-radius: 7px
+					background-color: #fff
+					transition: top .15s ease-out .15s, transform .15s ease-in .0s
+
+			& > nav
+				position: absolute
+				width: 0px
+				height: 0px
+				border-radius: 50%
+				background-color: #1a1a1a
+				z-index: 56
+				transition: width .2s ease-in, height .2s ease-in
+
+				& > ul
+					position: fixed
+					top: 0px
+					left: 0px
+					width: 100%
+					height: 100%
+					list-style: none
+					opacity: 0
+					display: none
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					transition: opacity .3s ease
+
+					& > li
+						margin: 20px 0px
+
+						@media only screen and (max-height: 380px)
+							margin: 15px 0px
+
+						@media only screen and (max-height: 330px)
+							margin: 10px 0px
+
+						& > a
+							font-family: $f-nobr
+							font-size: 1.3em
+							letter-spacing: 3px
+							text-decoration: none
+							text-transform: uppercase
+							color: #a6a6a6
+
+							&:hover
+								color: #fff
+
+							@media only screen and (max-height: 330px)
+								font-size: 1.1em
+
+			&.show
+				& > nav
+					transition: width .15s ease-out, height .15s ease-out
+
+					@media only screen and (orientation: landscape)
+						width: 300vw
+						height: 300vw
+
+					@media only screen and (orientation: portrait)
+						width: 300vh
+						height: 300vh
+
+					& > ul
+						opacity: 1
+
+				& > .obj
+					background-color: #0000
+
+					&:before
+						top: 0px
+						transform: rotate(-45deg)
+						transition: top .15s ease-in, transform .15s ease-out .15s
+
+					&:after
+						top: 0px
+						transform: rotate(45deg)
+						transition: top .15s ease-in, transform .15s ease-out .15s
+
+	&-block
+		position: relative
+		width: 100%
+		margin-top: 3.5em
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		&.laptop-show
+			display: none
+
+		& > strong
+			margin-bottom: 20px
+			font-family: $f-nobr
+			font-size: 4em
+			text-transform: uppercase
+			letter-spacing: 7px
+			-webkit-text-stroke-width: 1.2px
+			-webkit-text-stroke-color: #000 
+			color: #fff
+
+			&.animate__fadeInUp
+				animation: fadeInUp
+				animation-duration: 1.5s
+
+			@media only screen and (max-height: 400px)
+				font-size: 3.5em
+
+		& > p
+			width: 280px
+			margin-bottom: 10px
+			font-family: $f-nobr
+			font-size: 1.75em
+			letter-spacing: 4px
+			line-height: 45px
+			text-align: center
+			color: #fff
+			opacity: 0
+
+			&.animate__fadeInUp
+				animation: fadeInUp
+				animation-duration: 1.5s
+				animation-delay: 0.5s
+
+			&.animate__animated
+				opacity: 1
+
+		& > address
+			margin-bottom: 7px
+			font-family: $f-nobr
+			font-size: 0.9em
+			font-style: normal
+			color: #fff
+			opacity: 0
+
+			&.animate__fadeInUp
+				animation: fadeInUp
+				animation-duration: 1.5s
+				animation-delay: 1s
+
+			&.animate__animated
+				opacity: 1
+
+		@media only screen and (max-height: 430px)
+			margin-top: 1em
+
+			& > strong
+				margin-bottom: 5px
+
+			& > p
+				line-height: 35px
+
+				@media only screen and (max-height: 400px)
+					width: 250px
+					font-size: 1.25em
+					line-height: 25px
+
+			& > address
+				@media only screen and (max-height: 400px)
+					font-size: 0.7em
+
+	& > .wrap
+		position: absolute
+		bottom: 0px
+		margin-bottom: 100px
+		width: 100%
+		display: flex
+		justify-content: center
+
+		@media only screen and (min-height: 700px)
+			margin-bottom: 150px
+
+		@media only screen and (max-height: 480px)
+			margin-bottom: 50px
+
+		@media only screen and (max-height: 430px)
+			margin-bottom: 10px
+
+		& > button
+			width: 250px
+			height: 50px
+			background-image: linear-gradient(135deg, rgba(255, 147, 76, 0.99608) 0%, rgb(252, 104, 111) 100%)
+			box-shadow: 0px 15px 20.79px 6.21px rgba(91, 91, 91, 0.3)
+			border: none
+			outline: none
+			border-radius: 10px
+			font-family: $f-nobr
+			letter-spacing: 2px
+			color: #fff
+			cursor: pointer
+
+			&:active
+				background-image: linear-gradient(315deg, rgba(255, 147, 76, 0.99608) 0%, rgb(252, 104, 111) 100%)
+
+	& > .modal-window
+		position: fixed
+		top: 0px
+		left: 0px
+		width: 100%
+		height: 100%
+		background-color: #0009
+		opacity: 0
+		display: none
+		transition: opacity .3s ease
+		z-index: 100
+
+		&.show
+			opacity: 1
+
+		&.laptop-show.desktop-show
+			display: none
+
+		&.mob-show.tablet-show
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: space-between
+
+			& > .empty
+				width: calc(100% - 40px)
+				margin: 20px
+				display: flex
+				justify-content: flex-end
+
+				@media only screen and (max-height: 500px)
+					margin: 10px 20px
+
+				& > button
+					width: 40px
+					height: 40px
+					background-color: #0000
+					border: none
+					outline: none
+					cursor: pointer
+
+					@media only screen and (max-height: 500px)
+						width: 30px
+						height: 30px
+
+					& > img
+						width: 100%
+						height: 100%
+						object-fit: contain
+
+			& > .wrap
+				width: calc(100% - 80px)
+				height: 100%
+				margin: 10px 40px 30px
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: space-evenly
+
+				@media only screen and (max-height: 390px)
+					margin-top: 0px
+					margin-bottom: 15px
+
+				& > strong
+					width: 240px
+					margin-bottom: 30px
+					font-family: $f-nobr
+					line-height: 1.6em
+					letter-spacing: 1.7px
+					text-align: center
+					color: #fff
+
+					@media only screen and (max-height: 500px)
+						margin-bottom: 15px
+
+					@media only screen and (max-height: 390px)
+						margin-bottom: 5px
+
+				& > .btns
+					width: 100%
+					height: 335px
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: space-between
+
+					@media only screen and (max-height: 540px)
+						height: 100%
+						justify-content: space-around
+
+					& > button
+						position: relative
+						width: 240px
+						height: 150px
+						background-color: #0000
+						border: none
+						border-radius: 10px
+						outline: none
+						overflow: hidden
+						display: flex
+						flex-direction: column
+						align-items: center
+						justify-content: center
+						transition: background-color .3s ease
+
+						&:active
+							background-color: #0004
+
+						@media only screen and (max-height: 540px)
+							height: 125px
+
+						@media only screen and (max-height: 440px)
+							height: 100px
+
+						@media only screen and (max-height: 340px)
+							height: 75px
+
+						@media only screen and (max-height: 290px)
+							height: 50px
+
+						& > .bg
+							position: absolute
+							width: 100%
+							height: 100%
+							top: 0px
+							left: 0px
+							z-index: -3
+
+							& > .wrap
+								position: absolute
+								display: block
+								width: 100%
+								height: 100%
+
+								& > img, source
+									width: 100%
+									height: 100%
+									object-fit: cover
+
+							& > .grad
+								position: relative
+								width: 100%
+								height: 100%
+								opacity: .3
+								background-image: linear-gradient(135deg, rgb(71, 80, 154) 0%, rgb(103, 113, 230) 100%)
+
+						& > address
+							font-family: $f-nobr
+							font-style: normal
+							letter-spacing: 1.2px
+							text-shadow: 0px 5px 11px rgba(0, 0, 0, 1)
+							color: #fff
+
+							@media only screen and (max-height: 440px)
+								margin-bottom: 30px
+
+							@media only screen and (max-height: 340px)
+								margin-bottom: 15px
+
+							@media only screen and (max-height: 290px)
+								margin-bottom: 0px
+
+						& > .wrap
+							position: absolute
+							bottom: 15px
+							width: 40px
+							height: 40px
+
+							@media only screen and (max-height: 540px)
+								bottom: 10px
+								width: 30px
+								height: 30px
+
+							@media only screen and (max-height: 340px)
+								bottom: 5px
+								width: 25px
+								height: 25px
+
+							@media only screen and (max-height: 290px)
+								display: none
+
+							& > img
+								width: 100%
+								height: 100%
+								object-fit: contain
+
+main
+	flex: 1 0 auto
+	width: 100%
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.sec1
+	position: relative
+	width: 100%
+	height: 100vh
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-end
+
+	&-blocks
+		top: 0px
+		position: absolute
+		width: 100%
+		height: 100%
+		overflow: hidden
+		display: flex
+		flex-direction: column
+		z-index: -2
+
+		&-line
+			height: 33.3333vh
+			display: flex
+
+			& > .block
+				position: static
+				max-width: 33.3333vh
+				min-width: 33.3333vh
+				height: 33.3333vh
+
+				& > img
+					width: 100%
+					height: 100%
+					object-fit: cover
+
+	& > .before
+		position: absolute
+		top: -150vh
+		width: 100%
+		min-height: 150vh
+		background-color: #fff
+		z-index: -1
+
+	& > .grad
+		position: absolute
+		width: 100%
+		height: 100%
+		background-image: linear-gradient(135deg, rgb(182, 53, 156) 0%, rgb(239, 10, 106) 100%)
+		opacity: .302
+		z-index: 0
+
+	& > .wrap
+		position: relative
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+
+		& > p
+			font-family: $f-nobr
+			font-size: 2.2em
+			text-transform: uppercase
+			-webkit-text-stroke-width: 1px
+			-webkit-text-stroke-color: #000
+			text-align: center
+			color: #fff
+			opacity: 0
+
+			&.animate__fadeInUp
+				animation: fadeInUp
+				animation-duration: .5s
+
+			&.animate__animated
+				opacity: 1
+
+			@media only screen and (max-height: 380px)
+				font-size: 1.8em
+
+	& > .btns
+		position: relative
+		margin-bottom: 100px
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		@media only screen and (min-height: 700px)
+			margin-bottom: 150px
+
+		@media only screen and (max-height: 480px)
+			margin-bottom: 50px
+
+		@media only screen and (max-height: 430px)
+			margin-bottom: 10px
+
+		& > button
+			width: 250px
+			height: 50px
+			margin-top: 10px
+			border: none
+			outline: none
+			box-shadow: 0px 15px 20.79px 6.21px rgba(91, 91, 91, 0.3)
+			font-family: $f-nobr
+			letter-spacing: 2px
+			color: #fff
+			border-radius: 10px
+			cursor: pointer
+
+			&.place
+				background-image: linear-gradient(315deg, rgba(253, 83, 146, 0.99608) 0%, rgb(248, 111, 100) 100%)
+
+				&:active
+					background-image: linear-gradient(135deg, rgba(253, 83, 146, 0.99608) 0%, rgb(248, 111, 100) 100%)
+
+			&.vk
+				background-image: linear-gradient(315deg, rgb(30, 60, 114) 0%, rgb(42, 82, 152) 100%)
+
+				&:active
+					background-image: linear-gradient(135deg, rgb(30, 60, 114) 0%, rgb(42, 82, 152) 100%)
+
+			&:first-child
+				margin-top: 0px
+
+.sec2
+	position: relative
+	width: 100%
+	min-height: 100vh
+	background-size: contain
+
+	.webp &
+		background-image: url("/img/sec2-bg.webp")
+
+	.jpeg2000 &
+		background-image: url("/img/sec2-bg.jp2")
+
+	.no-webp.no-jpeg2000 &
+		background-image: url("/img/sec2-bg.png")
+
+	&-main
+		width: calc(100% - 10vw)
+		margin: 90px 5vw
+		display: flex
+		flex-direction: column
+		align-items: center
+		z-index: 0
+
+		@media only screen and (max-height: 470px)
+			margin: 75px 5vw
+
+		& > strong
+			max-width: 300px
+			margin-bottom: 1em
+			font-family: $f-nobr
+			font-size: 2em
+			text-align: center
+			line-height: 1.5em
+			color: #fff
+			opacity: 0
+
+			&.animate__fadeInUp
+				animation: fadeInUp
+				animation-duration: .5s
+
+			&.animate__animated
+				opacity: 1
+
+			@media only screen and (max-height: 470px)
+				font-size: 1.8em
+
+		&-coms
+			width: 100%
+			display: block
+			z-index: 1
+
+			&-line
+				width: 100%
+				margin-bottom: 5vw
+				display: flex
+				flex-direction: column
+				align-items: center
+
+				&:last-child
+					margin-bottom: 0px
+
+				&-block
+					position: relative
+					width: 290px
+					height: 290px
+					margin-bottom: 15px
+					display: flex
+					flex-direction: column
+
+					&:last-child
+						margin-bottom: 0px
+
+					& > .wrap
+						position: absolute
+						width: 100%
+						height: 100%
+						border-radius: 10px
+						background-color: #fff
+						overflow: hidden
+						box-shadow: 0px 15px 20.79px 6.21px rgba(0, 0, 0, 0.3)
+						z-index: -1
+
+						& > .color
+							position: absolute
+							width: calc(100% - 4px)
+							height: calc(100% - 4px)
+							border-radius: 10px
+							border-top: 2px solid #006f4c77
+							border-left: 2px solid #006f4c77
+							border-bottom: 2px solid #002f0c77
+							border-right: 2px solid #002f0c77
+							opacity: .9
+							z-index: 2
+
+						& > picture
+							width: 100%
+							height: 100%
+							display: block
+
+							& > img, source
+								width: calc(100%)
+								height: calc(100%)
+								object-fit: cover
+								opacity: .9
+								z-index: -2
+
+					&-title
+						width: calc(100% - 30px)
+						height: calc(30% - 10px)
+						margin: 5px 15px
+						display: flex
+						justify-content: space-between
+						align-items: center
+
+						& > .wrap
+							max-width: 60%
+							display: block
+
+							& > img, & > source
+								width: 100%
+								height: 100%
+								object-fit: contain
+
+						& > span
+							font-family: $f-nobr
+							color: #fe0
+							font-size: 35px
+							-webkit-text-stroke: 1.8px #000
+							text-shadow: 0px 13px 20.79px rgba(0, 0, 0, 0.4)
+
+					&-com
+						position: relative
+						width: calc(100% - 30px)
+						height: 70%
+						margin: 0px 15px
+
+						&-user
+							position: absolute
+							width: 100%
+							height: 100%
+							display: flex
+							flex-direction: column
+							opacity: 0
+							transition: opacity .3s ease .0s
+
+							&.show
+								opacity: 1
+
+							&-who
+								width: 100%
+								height: 32px
+								margin-top: -3px
+								margin-bottom: 10px
+								display: flex
+								justify-content: space-between
+								align-items: center
+
+								&-name
+									width: calc(100% - 15px)
+									height: 32px
+									margin-right: 8px
+									white-space: nowrap
+									overflow: hidden
+									text-overflow: ellipsis
+									font-family: $f-nobr
+									font-size: 18px
+									letter-spacing: 3px
+									line-height: 1.2em
+									text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
+									color: #fff
+
+								&-rate
+									margin-right: 15px
+									height: 28px
+									font-family: $f-nobr
+									font-size: 16px
+									text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
+									color: #fff
+
+							& > p
+								height: 164px
+								margin-top: -10px
+								font-family: $f-nobr
+								font-size: 14px
+								text-overflow: ellipsis
+								line-height: 20px
+								letter-spacing: 1.5px
+								text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
+								color: #fff
+								overflow: hidden
+								display: -webkit-box
+								-webkit-line-clamp: 8
+								-webkit-box-orient: vertical
+
+.sec3
+	position: relative
+	width: 100%
+	min-height: 100vh
+	background-size: 90px
+	overflow: hidden
+
+	.webp &
+		background-image: url("/img/sec3-bg.webp")
+
+	.jpeg2000 &
+		background-image: url("/img/sec3-bg.jp2")
+
+	.no-webp.no-jpeg2000 &
+		background-image: url("/img/sec3-bg.png")
+
+	& > .wrap
+		width: calc(100% - 10vw)
+		margin: 5em 5vw
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		& > h1
+			margin-bottom: 1em
+			font-family: $f-nobr
+			font-size: 2.2em
+			text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.6)
+			letter-spacing: 3px
+			-webkit-text-stroke: 1.2px #000
+			color: #fff
+			opacity: 0
+
+			&.animate__fadeInUp
+				animation: fadeInUp
+				animation-duration: .5s
+
+			&.animate__animated
+				opacity: 1
+
+		& > .blocks
+			width: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+
+			& > .line
+				width: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+
+				& > .block
+					width: 100%
+					max-width: 300px
+					height: 150px
+					display: flex
+					justify-content: space-between
+					align-items: center
+
+					& > .list
+						width: calc(100% - 0.5em)
+						max-width: 225px
+						height: 120px
+						margin-right: 0.5em
+						display: flex
+						justify-content: flex-start
+						align-items: center
+
+						& > ul
+							width: 100%
+							list-style: none
+
+							& > li
+								width: 100%
+								margin: 12px 0em
+								display: flex
+								justify-content: space-between
+								align-items: center
+
+								&:first-child
+									margin-top: 0px
+
+								&:last-child
+									margin-bottom: 0px
+
+								& > span
+									font-family: $f-nobr
+									font-size: 0.7em
+									line-height: 1.25em
+									color: #fff
+
+									&.title
+										width: 80%
+
+									&.price
+										width: 20%
+										display: flex
+										justify-content: center
+										align-items: center
+
+								& > .desc
+									display: none
+
+					& > .wrap
+						width: 50%
+						height: 120px
+
+						& > img
+							width: 100%
+							height: 100%
+							object-fit: contain
+							display: block
+
+						&.special
+							width: 100%
+							height: 90%
+							margin-right: -2em
+
+					&.reverse
+						flex-direction: row-reverse
+
+						& > .list
+							margin-right: 0em
+							margin-left: 0.5em
+
+				&.mob-show.tablet-show
+					& > .block
+						flex-direction: row-reverse
+
+						&.reverse
+							flex-direction: row
+
+.sec4
+	position: relative
+	width: 100%
+	min-height: 100vh
+	background-size: 90px
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	.webp &
+		background-image: url("/img/sec4-bg.webp")
+
+	.jpeg2000 &
+		background-image: url("/img/sec4-bg.jp2")
+
+	.no-webp.no-jpeg2000 &
+		background-image: url("/img/sec4-bg.png")
+
+	& > .wrap
+		width: calc(100% - 10vw)
+		max-width: 300px
+		margin: 5em 5vw
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		@media only screen and (max-height: 400px)
+			margin: 3em 5vw
+
+		& > h1
+			margin-bottom: 2em
+			font-family: $f-nobr
+			letter-spacing: .05em
+			-webkit-text-stroke: 1.2px #000
+			text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3)
+			font-size: 2em
+			color: #fff
+			opacity: 0
+
+			&.animate__fadeInUp
+				animation: fadeInUp
+				animation-duration: .5s
+
+			&.animate__animated
+				opacity: 1
+
+			@media only screen and (max-height: 400px)
+				margin-bottom: 1em
+
+		& > .blocks
+			width: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+
+			& > .block
+				margin-bottom: 70px
+				width: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+
+				&:last-child
+					margin-bottom: 0em
+
+				& > .wrap
+					width: 100%
+
+					box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.3)
+					display: flex
+
+					@media only screen and (max-height: 350px)
+						width: 80%
+
+					@media only screen and (max-height: 300px)
+						width: 60%
+
+					& > img, & > source
+						width: 100%
+						height: 100%
+						object-fit: cover
+						display: block
+
+				& > .data
+					width: 100%
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					align-items: center
+
+					& > .info
+						margin: 2em 0em
+						display: flex
+						flex-direction: column
+						justify-content: space-between
+						align-items: center
+
+						& > address
+							font-family: $f-nobr
+							font-style: normal
+							color: #fff
+							letter-spacing: 1.5px
+							line-height: 1.3em
+
+						& > p
+							font-family: $f-nobr
+							text-align: center
+							color: #fff
+							letter-spacing: 1.5px
+							line-height: 1.3em
+
+					& > button
+						background-image: linear-gradient(225deg, rgba(255, 147, 76, 0.99608) 0%, rgb(252, 104, 111) 100%)
+						border: none
+						outline: none
+						border-radius: 15px
+						padding: 1em 3em
+						font-family: $f-nobr
+						letter-spacing: 1.5px
+						box-shadow: 5px 10px 15px 3px rgba(0, 0, 0, 0.3)
+						color: #fff
+						cursor: pointer
+
+						&:active
+							background-image: linear-gradient(135deg, rgba(255, 147, 76, 0.99608) 0%, rgb(252, 104, 111) 100%)
+
+
+				& > .imgs
+					display: none
+
+.f
+	position: relative
+	flex: 0 0 auto
+	width: 100%
+	height: 100vh
+	background-size: 90px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+	.webp &
+		background-image: url("/img/f-bg.webp")
+
+	.jpeg2000 &
+		background-image: url("/img/f-bg.jp2")
+
+	.no-webp.no-jpeg2000 &
+		background-image: url("/img/f-bg.png")
+
+	& > blockquote
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+
+		& > p
+			font-family: $f-pac
+			font-size: 1.1em
+			letter-spacing: 3px
+			line-height: 2.5em
+			text-align: center
+			color: #fff
+			flex-direction: column
+
+			& > div
+				& > span
+					opacity: 0
+
+					&.animate__fadeIn
+						animation: fadeIn
+						animation-duration: 1s
+
+					&.animate__animated
+						opacity: 1
+
+			@media only screen and (max-height: 390px)
+				line-height: 2em
+
+			@media only screen and (max-height: 320px)
+				line-height: 1.5em
+				font-size: 0.9em
+
+	& > a
+		position: absolute
+		bottom: 0px
+		margin-bottom: 30px
+		font-family: $f-nobr
+		font-size: 1.1em
+		letter-spacing: 3px
+		text-decoration: none
+		color: #fff
+
+		&:hover
+			text-decoration: underline
+
+		@media only screen and (max-height: 390px)
+			margin-bottom: 20px
+
+		@media only screen and (max-height: 320px)
+			margin-bottom: 10px
+			font-size: 0.9em
+
+@media only screen and (min-width: 420px)
+	.sec2
+		&-main
+			&-coms
+				&-line
+					&-block
+						width: 350px
+						height: 350px
+						margin-bottom: 30px
+
+						&-com
+							&-user
+								& > p
+									height: 204px
+									-webkit-line-clamp: 10

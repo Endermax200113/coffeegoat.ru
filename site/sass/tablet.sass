@@ -1,0 +1,167 @@
+@media only screen and (min-width: 481px)
+	.desktop-show
+		display: none
+
+	.desktop-hide
+		display: inherit
+
+	.laptop-show
+		display: none
+
+	.laptop-hide
+		display: inherit
+
+	.tablet-show
+		display: inherit
+
+	.tablet-hide
+		display: none
+
+	.mob-show
+		display: none
+
+	.mob-hide
+		display: inherit
+
+	.h
+		&-panel
+			&.tablet-show
+				display: flex
+
+		&-block
+			&.tablet-show
+				display: flex
+
+		& > .modal-window
+			&.mob-show.tablet-show
+				display: flex
+
+	.sec3
+		& > .wrap
+			& > .blocks
+				& > .line
+					& > .block
+						max-width: 350px
+
+	.sec4
+		& > .wrap
+			max-width: inherit
+
+			& > .blocks
+				& > .block
+					height: 200px
+					flex-direction: row
+					justify-content: center
+
+					& > .wrap
+						width: 200px
+						height: 200px
+						margin-right: 0.5em
+
+					& > .data
+						width: 220px
+						height: 100%
+						margin-left: 0.5em
+						justify-content: space-between
+						align-items: flex-start
+
+						& > .info
+							height: 100%
+							margin: 0em
+							align-items: flex-start
+							justify-content: flex-start
+
+							& > address
+								text-align: left
+
+							& > p
+								text-align: left
+
+					&.reverse
+						flex-direction: row-reverse
+
+						& > .wrap
+							margin-right: 0em
+							margin-left: 0.5em
+
+						& > .data
+							margin-right: 0.5em
+							margin-left: 0em
+
+
+@media only screen and (min-width: 577px)
+	.h
+		& > .modal-window
+			&.mob-show.tablet-show
+				& > .empty
+					@media only screen and (max-height: 500px)
+						margin: 20px
+
+					& > .wrap
+						@media only screen and (max-height: 500px)
+							width: 40px
+							height: 40px
+
+				& > .wrap
+					& > strong
+						width: auto
+						margin-bottom: 0px
+						font-size: 1.3em
+
+						@media only screen and (max-height: 500px)
+							margin-bottom: 0px
+
+					& > .btns
+						max-width: 1000px
+						height: 100%
+						flex-direction: row
+						justify-content: space-evenly
+
+						& > button
+							width: 220px
+
+							@media only screen and (max-height: 540px)
+								height: 150px
+
+							@media only screen and (max-height: 330px)
+								height: 100px
+
+							@media only screen and (max-height: 290px)
+								height: 50px
+
+							& > address
+								@media only screen and (max-height: 440px)
+									margin-bottom: 0px
+
+								@media only screen and (max-height: 330px)
+									margin-bottom: 15px
+
+								@media only screen and (max-height: 290px)
+									margin-bottom: 0px
+
+							& > .wrap
+								@media only screen and (max-height: 540px)
+									bottom: 15px
+									width: 40px
+									height: 40px
+
+								@media only screen and (max-height: 330px)
+									bottom: 10px
+									width: 30px
+									height: 30px
+
+	.sec3
+		& > .wrap
+			& > .blocks
+				& > .block
+					max-width: 400px
+
+	.sec4
+		& > .wrap
+			& > .blocks
+				& > .block
+					height: 250px
+
+					& > .wrap
+						width: 250px
+						height: 250px
